@@ -9,6 +9,8 @@ This project is work in progress, more categories and other features will be add
 ## Documentation
 The documentation can be viewed at [eldenring.cubed.gg/swagger](https://eldenring.cubed.gg/swagger)
 
+You can view the [Trello board](https://trello.com/b/DFMNpb0w) to see what's planned and in the works.
+
 ## Getting started
 You will need [Docker](https://docs.docker.com/get-docker/) and [MongoDB](https://www.mongodb.com/) installed on your system.
 
