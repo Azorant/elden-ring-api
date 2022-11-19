@@ -136,6 +136,8 @@ namespace EldenRingAPI.Services
                         case 18:
                             level.guard.boost = value;
                             break;
+                        default:
+                            break;
                     }
                 }
                 #endregion
@@ -276,6 +278,8 @@ namespace EldenRingAPI.Services
                             break;
                         case "Arc":
                             weapon.requirements.arcane = level;
+                            break;
+                        default:
                             break;
                     }
                 }

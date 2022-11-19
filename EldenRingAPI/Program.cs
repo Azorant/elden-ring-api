@@ -3,7 +3,7 @@ using NLog.Web;
 
 namespace EldenRingAPI
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -15,7 +15,6 @@ namespace EldenRingAPI
                 var builder = WebApplication.CreateBuilder(args);
                 var startup = new Startup(builder.Configuration);
                 startup.ConfigureServices(builder.Services);
-                builder.WebHost.ConfigureKestrel(o => o.ListenAnyIP(5185));
                 var app = builder.Build();
                 startup.Configure(app, builder.Environment);
             }

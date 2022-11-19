@@ -1,5 +1,4 @@
 ﻿using EldenRingAPI.Interfaces;
-using EldenRingAPI.Models;
 using System.Net;
 
 namespace EldenRingAPI.Services
@@ -15,12 +14,13 @@ namespace EldenRingAPI.Services
             this.logger = logger;
         }
 
-        public async Task<Response> getWeapons(int page = 1)
+        public async Task<Response> getWeapons(int page, int perPage)
         {
             try
             {
                 if (page < 1) page = 1;
-                var weapons = await db.getWeapons(page);
+                if (perPage < 1) perPage = 1;
+                var weapons = await db.getWeapons(page, perPage);
 
                 return new Response(HttpStatusCode.OK, "Ok", weapons);
             }

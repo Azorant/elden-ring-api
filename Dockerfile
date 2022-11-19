@@ -9,7 +9,7 @@ WORKDIR /src
 COPY ["EldenRingAPI/EldenRingAPI.csproj", "EldenRingAPI/"]
 RUN dotnet restore "EldenRingAPI/EldenRingAPI.csproj"
 COPY . .
-WORKDIR "/src/EldenRingAPI"
+WORKDIR /src/EldenRingAPI
 RUN dotnet build "EldenRingAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish

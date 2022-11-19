@@ -5,7 +5,13 @@ namespace EldenRingAPI
 {
     public class Response
     {
-        public Response(HttpStatusCode statusCode, string message, object? data = null)
+        public Response(HttpStatusCode statusCode, string message)
+        {
+            StatusCode = statusCode;
+            Message = message;
+            Data = null;
+        }
+        public Response(HttpStatusCode statusCode, string message, object data)
         {
             StatusCode = statusCode;
             Message = message;
@@ -23,7 +29,7 @@ namespace EldenRingAPI
         T Data { get; set; }
     }
 
-    public struct Results<T>
+    public class Results<T>
     {
         public long count { get; set; }
         public decimal pages { get; set; }

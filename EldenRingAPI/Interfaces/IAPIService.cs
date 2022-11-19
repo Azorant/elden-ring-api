@@ -2,7 +2,7 @@
 {
     public interface IAPIService
     {
-        Task<Response> getWeapons(int page = 0);
+        Task<Response> getWeapons(int page, int perPage);
         Task<Response> getWeapon(string id);
     }
 }
